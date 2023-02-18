@@ -14,13 +14,13 @@ public class ReadFile {
         File file = new File(filename);
         Scanner in = new Scanner(file);
         int lineCounter=0;
+        String lines[] = new String[1000];
         String s = "";
         while(in.hasNextLine()){
-            s+=in.nextLine()+"&&&&&";
+            s=in.nextLine();
+            lines[lineCounter] = s;
             lineCounter++;
         }
-        String lines[] = new String[lineCounter];
-        lines = s.split("&&&&&");
         for (int i = 0; i < lineCounter; i++) {
             System.out.println(lines[i]);
         }
