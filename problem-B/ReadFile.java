@@ -18,7 +18,7 @@ public class ReadFile {
         String s = "";
         while(in.hasNextLine()){
             s=in.nextLine();
-            lines[lineCounter] = s;
+            lines[lineCounter] = "[" + lineCounter + "] " + s;
             lineCounter++;
         }
         for (int i = 0; i < lineCounter; i++) {
